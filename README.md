@@ -1,14 +1,16 @@
 # Synapse Remix Example
 
-Example showing how to use [@pyrx/synapse](https://www.npmjs.com/package/@pyrx/synapse) with Remix.
+All 16 SDK endpoints with [@pyrx/synapse](https://www.npmjs.com/package/@pyrx/synapse) + Remix.
 
 ## Setup
 
-1. `npm install`
-2. Copy `.env.example` to `.env`
-3. `npm run dev`
+1. `npm install` → 2. `.env.example` to `.env` → 3. `npm run dev`
 
-## Learn more
+## Routes
 
-- [Synapse Documentation](https://synapse.pyrx.tech/developers)
-- [Node.js SDK Reference](https://synapse.pyrx.tech/developers/sdks/node)
+**Core:** POST /api/track, /api/track/batch, /api/identify, /api/identify/batch, /api/send
+**Contacts:** GET /api/contacts, GET/PUT/DELETE /api/contacts/$id
+**Templates:** GET/POST /api/templates, GET/PUT/DELETE /api/templates/$slug, POST /api/templates/$slug/preview
+Plus form action on homepage.
+
+- [Synapse Docs](https://synapse.pyrx.tech/developers)
