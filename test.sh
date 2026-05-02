@@ -7,8 +7,11 @@ BASE_URL="http://localhost:4003"
 echo "Installing..."
 npm install > /dev/null 2>&1
 
+echo "Building..."
+npm run build > /dev/null 2>&1
+
 echo "Starting Remix on port 4003..."
-npm run dev > /dev/null 2>&1 &
+npx remix vite:dev --port 4003 > /dev/null 2>&1 &
 SERVER_PID=$!
 trap "kill $SERVER_PID 2>/dev/null; wait $SERVER_PID 2>/dev/null" EXIT
 
